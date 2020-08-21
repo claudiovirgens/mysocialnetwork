@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 class Signin extends Component {
 
@@ -80,7 +81,13 @@ class Signin extends Component {
 
 
     render() {
-        const { email, password, error } = this.state;
+        const { email, password, error, redirectToReferer } = this.state;
+
+        if (redirectToReferer) {
+            return <Redirect to="/" />
+        }
+
+
         return (
             <div className="container">
                 <h2 className="mt-5 mb-5">SignIn</h2>
