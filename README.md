@@ -1,4 +1,4 @@
-## MySocialNt  
+## MySocialBook  
 Social Network MERN FullStack Project (MongoDB, Express, React and Nodejs)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
