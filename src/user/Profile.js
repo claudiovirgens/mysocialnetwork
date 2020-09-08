@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { isAuthenticated } from '../auth'
 import { Redirect, Link } from "react-router-dom";
-import { read } from './appUser';
+import { read } from './apiUser';
 
 class Profile extends Component {
 
