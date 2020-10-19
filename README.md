@@ -1,5 +1,5 @@
 ## MySocialBook  
-Social Network MERN FullStack Project (MongoDB, Express, React and Nodejs)
+This is A CMS Web Tool Build from Scratch with MERN FullStack Project (MongoDB, Express, React and Nodejs)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
