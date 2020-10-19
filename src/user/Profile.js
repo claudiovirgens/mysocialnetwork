@@ -3,6 +3,7 @@ import { isAuthenticated } from '../auth'
 import { Redirect, Link } from "react-router-dom";
 import { read } from './apiUser';
 import DefaultProfile from '../images/avatar.jpg';
+import DeleteUser from './DeleteUser';
 
 class Profile extends Component {
 
@@ -47,8 +48,8 @@ class Profile extends Component {
                     </div>
                     <div className="col-md-6">
                         <div className="lead mt-2">
-                            <p>Hello {isAuthenticated().user.name}</p>
-                            <p>Email: {isAuthenticated().user.email}</p>
+                            <p>Hello {user.name}</p>
+                            <p>Email: {user.email}</p>
                             <p>{`Joined in ${new Date(user.created).toDateString()}`}</p>
                         </div>
                         {isAuthenticated().user && (
@@ -57,7 +58,7 @@ class Profile extends Component {
                                     to={`/user/edit/${user._id}`}>
                                     Edit Profile
                                 </Link>
-                                <button className="btn btn-raised btn-danger">Delete Profile</button>
+                                <DeleteUser />
 
                             </div>
                         )}
