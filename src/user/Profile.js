@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { isAuthenticated } from '../auth'
+import { isAuthenticated } from '../auth';
 import { Redirect, Link } from "react-router-dom";
 import { read } from './apiUser';
 import DefaultProfile from '../images/avatar.jpg';
@@ -33,6 +33,11 @@ class Profile extends Component {
         this.init(userId);
     }
 
+    componentWillReceiveProps(props) {
+        const userId = props.match.params.userId;
+        this.init(userId);
+    }
+
     render() {
         const { redirectToSignin, user } = this.state;
         if (redirectToSignin) return <Redirect to="/signin" />
@@ -58,7 +63,7 @@ class Profile extends Component {
                                     to={`/user/edit/${user._id}`}>
                                     Edit Profile
                                 </Link>
-                                <DeleteUser />
+                                <DeleteUser userId={user._id} />
 
                             </div>
                         )}
